@@ -1,5 +1,7 @@
 <h1><%= @post.title %></h1>
 
 <!-- Add code here to link to the post's category. -->
-
+ <!-- Create a link to the category path, with the text being the name of this specific post's category -->
+ <!-- we use if to make sure that we don't list the category UNLESS the post has a category -->
+<h3>Category: <%= link_to @post.category.name, category_path(@post.category) if @post.category %></h3>
 <p><%= @post.description %></p>
